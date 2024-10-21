@@ -1,17 +1,32 @@
 // src/routes.js
 
-import HomePage from "../"
-import Challenges from "./pages/Challenges";
-import InterviewPrep from "./pages/InterviewPrep";
-import Blog from "./pages/Blog";
-import Contribute from "./pages/Contribute";
+import HomePage from "../pages/HomePage";
+import ChallengesPage from "../pages/ChallengesPage";
+import InterviewPrepPage from "../pages/InterviewPrepPage";
+import BlogPage from "../pages/BlogPage";
+import ContributePage from "../pages/ContributePage";
 
 const routes = [
-  { path: "/", name: "Home", Component: Home },
-  { path: "/challenges", name: "Challenges", Component: Challenges },
-  { path: "/interview-prep", name: "Interview Prep", Component: InterviewPrep },
-  { path: "/blog", name: "Blog", Component: Blog },
-  { path: "/contribute", name: "Contribute", Component: Contribute },
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/challenges",
+    element: <ChallengesPage />,
+  },
+  {
+    path: "/interview-prep",
+    element: <InterviewPrepPage />,
+  },
+  {
+    path: "/blog",
+    element: <BlogPage />,
+  },
+  {
+    path: "/contribute",
+    element: <ContributePage />,
+  },
 ];
 
 export default routes;

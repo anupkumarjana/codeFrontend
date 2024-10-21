@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Handjet:wght@100..900&display=swap");
+@font-face {
+  font-family: "Neue-Machina";
+  src: url("./assets/Neue-Machina/NeueMachina-Regular.otf");
+}
+
 *,
 body {
   margin: 0;
@@ -40,11 +47,12 @@ body {
   color: var(--color-primary-a50);
   background-color: var(--color-surface-a0);
 }
-.logo{
-  color: var(--color-primary-a0)
+.logo {
+  color: var(--color-primary-a30);
 }
 
-@font-face {
-  font-family: "Neue-Machina";
-  src: url("./assets/Neue-Machina/NeueMachina-Regular.otf");
+.greeting {
+  display: inline-block; /* Allows for smooth typing effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow to prevent visual glitches */
 }

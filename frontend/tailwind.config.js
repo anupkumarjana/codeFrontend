@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        handjet: ["'Handjet'", "cursive"], // Extend with Handjet font
+        arima: ["'Arima'", "cursive"],
+      },
+    },
   },
   plugins: [],
 };
