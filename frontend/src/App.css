@@ -1,0 +1,50 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #0d1117; */
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  font-family: "Neue-Machina", sans-serif;
+}
+:root {
+  /** Dark theme primary colors */
+  --color-primary-a0: #4dff00;
+  --color-primary-a10: #6fff3f;
+  --color-primary-a20: #88ff5e;
+  --color-primary-a30: #9dff78;
+  --color-primary-a40: #b1ff90;
+  --color-primary-a50: #c2ffa7;
+
+  /** Dark theme surface colors */
+  --color-surface-a0: #121212;
+  --color-surface-a10: #282828;
+  --color-surface-a20: #3f3f3f;
+  --color-surface-a30: #575757;
+  --color-surface-a40: #717171;
+  --color-surface-a50: #8b8b8b;
+
+  /** Dark theme mixed surface colors */
+  --color-surface-mixed-a0: #1c2617;
+  --color-surface-mixed-a10: #313a2c;
+  --color-surface-mixed-a20: #485043;
+  --color-surface-mixed-a30: #5f675b;
+  --color-surface-mixed-a40: #787e74;
+  --color-surface-mixed-a50: #91978e;
+}
+/** Examples */
+.bg-primary {
+  color: var(--color-primary-a50);
+  background-color: var(--color-surface-a0);
+}
+.logo{
+  color: var(--color-primary-a0)
+}
+
+@font-face {
+  font-family: "Neue-Machina";
+  src: url("./assets/Neue-Machina/NeueMachina-Regular.otf");
+}
