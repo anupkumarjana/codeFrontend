@@ -47,12 +47,92 @@ body {
   color: var(--color-primary-a50);
   background-color: var(--color-surface-a0);
 }
+.bg-gradient {
+  color: var(--color-primary-a50);
+  background: linear-gradient(
+    109.6deg,
+    rgb(6, 2, 2) 90.4%,
+    rgb(137, 30, 47) 100%
+  );
+}
 .logo {
   color: var(--color-primary-a30);
 }
 
-.greeting {
-  display: inline-block; /* Allows for smooth typing effect */
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflow to prevent visual glitches */
+.line {
+  overflow: hidden; /* Hide content as it animates */
+  display: block;
+  margin: 5px 0;
+}
+
+.line-inner {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: slideUp 1.5s ease-in-out forwards; /* Increased duration to 1.5s */
+}
+
+/* Add delay to each line based on its index */
+.line-0 .line-inner {
+  animation-delay: 0s;
+}
+.line-1 .line-inner {
+  animation-delay: 0.5s; /* Increased delay to 0.5s */
+}
+.line-2 .line-inner {
+  animation-delay: 1s;
+}
+.line-3 .line-inner {
+  animation-delay: 1.5s;
+}
+
+/* Keyframes for the sliding animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* CSS */
+.button-69 {
+  background-color: initial;
+  background-image: linear-gradient(#199a56 0, #157e46 100%);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #151515;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neue-Machina, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -4px;
+  outline: 0;
+  text-align: center;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: bottom;
+  width: 190px;
+}
+
+.button-69:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 1000px) {
+  .button-69 {
+    font-size: 14px;
+    height: 55px;
+    line-height: 55px;
+    width: 150px;
+  }
 }
