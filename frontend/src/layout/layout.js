@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div className="p-4">
+      <div className="">
         <Outlet /> {/* Render matching route component here */}
       </div>
     </>
