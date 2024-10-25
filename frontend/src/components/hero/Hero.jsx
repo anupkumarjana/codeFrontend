@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="flex flex-col justify-center items-center w-full h-full pt-20 relative">
+    <main className="flex flex-col justify-center items-center w-full screen pt-20 relative">
       <div className="text-[4rem] leading-[1.2em] text-center">
         <h1 ref={headingRef} className="text-white">
           Ultimate Playground for <br />
@@ -30,6 +30,11 @@ const Hero = () => {
           </span>
         </h1>
       </div>
+
+      <Link to="/challenges">
+        <button className="button-69">Solve a Challenge</button>
+      </Link>
+
       <div className="flex justify-start items-center absolute bottom-0 right-20">
         <h2 style={{ color: "#e4bb68" }}>
           console
@@ -47,10 +52,6 @@ const Hero = () => {
           ");
         </h2>
       </div>
-
-      <Link to="/challenges">
-        <button className="button-69">Solve a Challenge</button>
-      </Link>
     </main>
   );
 };

@@ -5,25 +5,22 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    "Home",
-    "Challenges",
-    "Interview Prep",
-    "Blog",
-    "Contribute",
-  ];
+  const navLinks = ["Dashboard", "Blog", "Contribute"];
 
   return (
-    <nav className="bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="text-xl font-bold logo">codeFrontend</div>
-          </div>
+    <nav className="bg-[#121212] border-b-2 border-[#1d1d1d] sticky top-0 z-10">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-2">
+          {/* Left Section: Logo and Nav Links */}
+          <div className="flex items-center space-x-8">
+            {/* Logo */}
+            <Link to="/">
+              {" "}
+              <div className="text-xl font-bold logo">codeFrontend</div>
+            </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-4">
               {navLinks.map((link) => (
                 <Link
                   key={link}
@@ -38,6 +35,11 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Right Section: Sign In Button */}
+          <div className="hidden md:block">
+            <button className="button-61">Sign In</button>
           </div>
 
           {/* Mobile Menu Button */}
