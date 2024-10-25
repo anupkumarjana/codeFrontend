@@ -1,10 +1,21 @@
 // src/routes.js
 
-import HomePage from "../pages/HomePage";
-import ChallengesPage from "../pages/ChallengesPage";
-import InterviewPrepPage from "../pages/InterviewPrepPage";
-import BlogPage from "../pages/BlogPage";
-import ContributePage from "../pages/ContributePage";
+import HomePage from "../pages/Nav-Pages/HomePage";
+import BlogPage from "../pages/Nav-Pages/BlogPage";
+import ContributePage from "../pages/Nav-Pages/ContributePage";
+// Dashboard Challenge Pages
+import DashboardPage from "../pages/Nav-Pages/DashboardPage";
+import ReactChallanges from "../pages/Dashboard-Pages/Challenge Pages/ReactChallanges";
+import JavaScriptChallenges from "../pages/Dashboard-Pages/Challenge Pages/JavaScriptChallenges";
+import HTMLChallenges from "../pages/Dashboard-Pages/Challenge Pages/HTMLChallenges";
+import CSSChallenges from "../pages/Dashboard-Pages/Challenge Pages/CSSChallenges";
+
+// Dashboard Technical Pages
+import ReactInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/ReactInterviewPrep";
+import JavaScriptInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/JavaScriptInterviewPrep";
+import HTMLInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/HTMLInterviewPrep";
+import CSSInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/CSSInterviewPrep";
+
 
 const routes = [
   {
@@ -12,13 +23,48 @@ const routes = [
     element: <HomePage />,
   },
   {
-    path: "/challenges",
-    element: <ChallengesPage />,
+    path: "/dashboard",
+    element: <DashboardPage />,
+    children: [
+
+      // Dashboard -> Challenges pages
+      {
+        path: "challenges/react",
+        element: <ReactChallanges />,
+      },
+      {
+        path: "challenges/javascript",
+        element: <JavaScriptChallenges />,
+      },
+      {
+        path: "challenges/html",
+        element: <HTMLChallenges />,
+      },
+      {
+        path: "challenges/css",
+        element: <CSSChallenges />,
+      },
+
+      // DashbOrd -> Interview Prep -> Technical Pages
+      {
+        path: "interview-prep/technical/react",
+        element: <ReactInterviewPrep />,
+      },
+      {
+        path: "interview-prep/technical/JavaScript",
+        element: <JavaScriptInterviewPrep />,
+      },
+      {
+        path: "interview-prep/technical/html",
+        element: <HTMLInterviewPrep />,
+      },
+      {
+        path: "interview-prep/technical/css",
+        element: <CSSInterviewPrep />,
+      },
+    ],
   },
-  {
-    path: "/interview-prep",
-    element: <InterviewPrepPage />,
-  },
+
   {
     path: "/blog",
     element: <BlogPage />,
@@ -26,6 +72,10 @@ const routes = [
   {
     path: "/contribute",
     element: <ContributePage />,
+  },
+  {
+    path: "*",
+    element: <div>404 - Page Not Found</div>,
   },
 ];
 
