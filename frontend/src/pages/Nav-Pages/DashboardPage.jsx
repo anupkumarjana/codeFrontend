@@ -5,18 +5,20 @@ import DashboardSideMenu from "../../components/dashboardSideMenu/DashboardSideM
 
 const DashboardPage = () => {
   return (
-    <div className="grid grid-cols-[260px,_1fr] relative">
-      <div className="">
+    <div
+      className="grid relative h-screen transition-all duration-300 
+      grid-cols-[70px_1fr] 
+      sm:grid-cols-[150px_1fr] 
+      md:grid-cols-[180px_1fr] 
+      lg:grid-cols-[190px_1fr]"
+    >
+      <aside className=" text-white">
         <DashboardSideMenu />
-      </div>
+      </aside>
 
-      {/* Renders child routes like /dashboard/challenges */}
-      {/* <ChallengesPage/> */}
-      {/* <InterviewPrepPage/> */}
-      <div className="p-5">
-        {" "}
+      <main className="p-5 overflow-auto">
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 };
