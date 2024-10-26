@@ -15,7 +15,7 @@ import ReactInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technica
 import JavaScriptInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/JavaScriptInterviewPrep";
 import HTMLInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/HTMLInterviewPrep";
 import CSSInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/CSSInterviewPrep";
-
+import BehavioralInterviewPrepPages from "../pages/Dashboard-Pages/Interview-prep/Behavioral-Pages/BehavioralInterviewPrepPages";
 
 const routes = [
   {
@@ -26,11 +26,11 @@ const routes = [
     path: "/dashboard",
     element: <DashboardPage />,
     children: [
-
       // Dashboard -> Challenges pages
       {
         path: "challenges/react",
         element: <ReactChallanges />,
+        
       },
       {
         path: "challenges/javascript",
@@ -44,8 +44,20 @@ const routes = [
         path: "challenges/css",
         element: <CSSChallenges />,
       },
-
-      // DashbOrd -> Interview Prep -> Technical Pages
+      // Dashboard -> Interview Prep -> Behavioral Pages
+      {
+        path: "interview-prep/behavioral/conflict-resolution",
+        element: <BehavioralInterviewPrepPages />,
+      },
+      {
+        path: "interview-prep/behavioral/leadership",
+        element: <BehavioralInterviewPrepPages />,
+      },
+      {
+        path: "interview-prep/behavioral/teamwork",
+        element: <BehavioralInterviewPrepPages />,
+      },
+      // Dashboard -> Interview Prep -> Technical Pages
       {
         path: "interview-prep/technical/react",
         element: <ReactInterviewPrep />,

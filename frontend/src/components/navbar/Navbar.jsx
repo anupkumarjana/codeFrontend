@@ -8,7 +8,7 @@ const Navbar = () => {
   const navLinks = ["Dashboard", "Blog", "Contribute"];
 
   return (
-    <nav className="bg-[#121212] border-b-2 border-[#1d1d1d] sticky top-0 z-10">
+    <nav className="bg-primary border-b-2 border-[#1d1d1d] sticky top-0 z-10 ">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-2">
           {/* Left Section: Logo and Nav Links */}
@@ -16,7 +16,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/">
               {" "}
-              <div className="text-xl font-bold logo">codeFrontend</div>
+              <span className="text-xl font-bold logo ">codeFrontend</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -47,7 +47,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white  "
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
@@ -92,6 +92,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
+                onClick={() => setIsOpen(!isOpen)}
                 key={link}
                 to={
                   link === "Home"
@@ -103,6 +104,9 @@ const Navbar = () => {
                 {link}
               </Link>
             ))}
+          </div>
+          <div className="pl-5 px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <button className="button-61">Sign In</button>
           </div>
         </div>
       )}

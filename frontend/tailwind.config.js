@@ -6,6 +6,8 @@ module.exports = {
       fontFamily: {
         handjet: ["'Handjet'", "cursive"], // Extend with Handjet font
         arima: ["'Arima'", "cursive"],
+        poppins: ["'Poppins'", "cursive"],
+        roboto: ["'Roboto'", "cursive"],
       },
     },
   },
