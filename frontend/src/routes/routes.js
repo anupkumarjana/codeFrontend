@@ -16,6 +16,7 @@ import JavaScriptInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Tec
 import HTMLInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/HTMLInterviewPrep";
 import CSSInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/CSSInterviewPrep";
 import BehavioralInterviewPrepPages from "../pages/Dashboard-Pages/Interview-prep/Behavioral-Pages/BehavioralInterviewPrepPages";
+import Workspace from "../components/workspace/Workspace";
 
 const routes = [
   {
@@ -30,7 +31,10 @@ const routes = [
       {
         path: "challenges/react",
         element: <ReactChallanges />,
-        
+      },
+      {
+        path: "challenges/react/workspace/:id", // Workspace page with problem ID
+        element: <Workspace />,
       },
       {
         path: "challenges/javascript",
