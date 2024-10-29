@@ -8,7 +8,7 @@ const PopularProblemsCard = ({ data }) => {
     <div className="w-96 rounded-lg border p-4 flex flex-col gap-2 card-box transition-transform duration-400 ease-in-out transform hover:-translate-y-1">
       <h4>{data.title}</h4>
       <p className="line-clamp-2 overflow-hidden text-ellipsis whitespace-normal text-sm">
-        {data.description}{" "}
+        {data.description?.summary}{" "}
         <FontAwesomeIcon icon={"house-flood-water-circle-arrow-right"} />
       </p>
       <span className="flex gap-2">

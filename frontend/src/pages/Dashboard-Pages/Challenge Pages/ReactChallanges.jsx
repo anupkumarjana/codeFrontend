@@ -10,7 +10,7 @@ const ReactChallanges = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Show shimmer for 3 seconds
+    }, 500); // Show shimmer for 3 seconds
 
     return () => clearTimeout(timer);
   }, []);

@@ -24,7 +24,7 @@ const ContributePage = () => {
   };
 
   return (
-    <div className="flex  items-start justify-between min-h-screen bg-gray-900 text-white p-10">
+    <div className="flex  items-start justify-between min-h-screen text-white p-10">
       <div className="flex flex-col gap-4 justify-start items-start">
         <h2 className="text-4xl font-bold">Contribute to the Community</h2>
         <h4 className="text-lg mb-8 max-w-xl text-start">
@@ -37,7 +37,7 @@ const ContributePage = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-6xl bg-gray-800 p-8 rounded-lg shadow-lg"
+        className="w-full max-w-6xl p-8 rounded-lg shadow-lg bg-[#191919]"
       >
         {/* Topic Dropdown */}
         <div className="mb-4">
@@ -49,7 +49,7 @@ const ContributePage = () => {
             name="topic"
             value={formData.topic}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
           >
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
@@ -70,7 +70,7 @@ const ContributePage = () => {
             value={formData.title}
             onChange={handleChange}
             required
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
             placeholder="Enter the title"
           />
         </div>
@@ -89,7 +89,7 @@ const ContributePage = () => {
             value={formData.description}
             onChange={handleChange}
             required
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
             rows="4"
             placeholder="Describe the problem or question"
           ></textarea>
@@ -106,7 +106,7 @@ const ContributePage = () => {
             type="url"
             value={formData.demoLink}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
             placeholder="Enter the GIF link for the demo output"
           />
         </div>
@@ -124,7 +124,7 @@ const ContributePage = () => {
             name="difficulty"
             value={formData.difficulty}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
           >
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
@@ -147,7 +147,7 @@ const ContributePage = () => {
             value={formData.authorName}
             onChange={handleChange}
             required
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
             placeholder="Enter your name"
           />
         </div>
@@ -166,7 +166,7 @@ const ContributePage = () => {
             type="url"
             value={formData.authorLinkedIn}
             onChange={handleChange}
-            className="w-full p-2 rounded bg-gray-700 text-white"
+            className="w-full p-2 rounded  text-white"
             placeholder="Enter your LinkedIn profile link"
           />
         </div>
