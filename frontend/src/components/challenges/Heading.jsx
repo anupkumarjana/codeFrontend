@@ -1,18 +1,18 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from '@fortawesome/free-brands-svg-icons';
+// import { faReact } from '@fortawesome/free-brands-svg-icons';
 
-const Heading = () => {
+const Heading = ({data}) => {
   return (
     <div className="flex justify-start items-center gap-4">
       <span className="text-5xl">
-        <FontAwesomeIcon icon={faReact} color="#61DAFB" />
+        <FontAwesomeIcon icon={data.icon} color={data.iconColor} />
       </span>
       <div>
-        <h3 className='text-2xl font-medium'>React Coding Problems</h3>
+        <h3 className='text-2xl font-medium'>{data.title}</h3>
         <p className='font-normal text-sm'>
-          Top React coding interview questions to build the most commonly-asked
-          front end UI components and applications.
+        {data.description}
+          
         </p>
       </div>
     </div>

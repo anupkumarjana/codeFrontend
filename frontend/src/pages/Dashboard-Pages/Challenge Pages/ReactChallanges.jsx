@@ -3,6 +3,8 @@ import Heading from "../../../components/challenges/Heading";
 // import PopularProblems from "../../../components/challenges/PopularProblems";
 import Problems from "../../../components/challenges/Problems";
 import ShimmerUI from "../../../components/challenges/ShimmerUI";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import {ReactChallengesData} from "../../../api/ReactChallengesData.js"
 
 const ReactChallanges = () => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +17,15 @@ const ReactChallanges = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const headingData = {
+    title: "React Coding Problems",
+    description:
+      "Top React coding interview questions to build the most commonly-asked front end UI components and applications.",
+    icon: faReact,
+    iconColor: "#61DAFB",
+  };
+
+
   return (
     <div className="p-7 font-poppins flex flex-col gap-10">
       {loading ? (
@@ -23,9 +34,9 @@ const ReactChallanges = () => {
       ) : (
         // Display actual content once loading is done
         <>
-          <Heading />
+          <Heading data={headingData} />
           {/* <PopularProblems /> */}
-          <Problems />
+          <Problems data={ReactChallengesData} type="react"/>
         </>
       )}
     </div>

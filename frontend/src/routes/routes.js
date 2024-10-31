@@ -16,7 +16,10 @@ import JavaScriptInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Tec
 import HTMLInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/HTMLInterviewPrep";
 import CSSInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/CSSInterviewPrep";
 import BehavioralInterviewPrepPages from "../pages/Dashboard-Pages/Interview-prep/Behavioral-Pages/BehavioralInterviewPrepPages";
-import Workspace from "../components/workspace/Workspace";
+import ReactWorkSpace from "../pages/Dashboard-Pages/Challenge Pages/WorkspacePages/ReactWorkSpace";
+import JavaScriptWorkspace from "../pages/Dashboard-Pages/Challenge Pages/WorkspacePages/JavaScriptWorkspace";
+import HTMLWorkspace from "../pages/Dashboard-Pages/Challenge Pages/WorkspacePages/HTMLWorkspace";
+import CSSWorkspace from "../pages/Dashboard-Pages/Challenge Pages/WorkspacePages/CSSWorkspace";
 
 const routes = [
   {
@@ -32,10 +35,7 @@ const routes = [
         path: "challenges/react",
         element: <ReactChallanges />,
       },
-      {
-        path: "challenges/react/workspace/:id", // Workspace page with problem ID
-        element: <Workspace />,
-      },
+
       {
         path: "challenges/javascript",
         element: <JavaScriptChallenges />,
@@ -47,6 +47,23 @@ const routes = [
       {
         path: "challenges/css",
         element: <CSSChallenges />,
+      },
+
+      {
+        path: "challenges/react/workspace/:id", // Workspace page with problem ID
+        element: <ReactWorkSpace />,
+      },
+      {
+        path: "challenges/javascript/workspace/:id", // Workspace page with problem ID
+        element: <JavaScriptWorkspace />,
+      },
+      {
+        path: "challenges/html/workspace/:id", // Workspace page with problem ID
+        element: <HTMLWorkspace />,
+      },
+      {
+        path: "challenges/css/workspace/:id", // Workspace page with problem ID
+        element: <CSSWorkspace />,
       },
       // Dashboard -> Interview Prep -> Behavioral Pages
       {

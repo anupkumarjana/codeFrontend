@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { ReactChallengesData } from "../../api/ReactChallengesData";
+// import { ReactChallengesData } from "../../api/ReactChallengesData";
 import ProblemStatementCard from "./ProblemStatementCard";
 
-const Workspace = () => {
+const Workspace = ({data}) => {
   const { id } = useParams(); // Get the problem ID from the URL
-  const problem = ReactChallengesData[id]; // Find the corresponding problem
+  const problem = data[id]; // Find the corresponding problem
 
   if (!problem) {
     return <div className="text-center">Problem not found!</div>;

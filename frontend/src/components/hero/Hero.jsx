@@ -42,15 +42,13 @@ const Hero = () => {
      };
    }, []);
  
-   
-
   return (
     <main
       id="main"
       className="flex flex-col justify-center items-center w-full h-[calc(100vh-54px)] relative overflow-hidden hero-bg px-4"
     >
       {/* cursor */}
-      <div className="custom-cursor md:block hidden" ref={cursorRef}></div>
+      <div className="custom-cursor lg:block hidden" ref={cursorRef}></div>
       <div className="text-center">
         <h1
           ref={headingRef}

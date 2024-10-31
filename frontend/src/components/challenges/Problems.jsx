@@ -4,7 +4,7 @@ import ColoredIcons from "../ColoredIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFire } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { ReactChallengesData } from "../../api/ReactChallengesData";
+
 
   const difficultyStyles = {
     Easy: { color: "#50C878", text: "Easy" }, // Green
@@ -12,24 +12,21 @@ import { ReactChallengesData } from "../../api/ReactChallengesData";
     Hard: { color: "#FF4500", text: "Hard" }, // Red
   };
 
-const Problems = () => {
-  const [filteredData, setFilteredData] = useState(ReactChallengesData);
+const Problems = ({data, type}) => {
+  const [filteredData, setFilteredData] = useState(data);
   const navigate = useNavigate();
 
   return (
     <div className="">
       {/* <h4 className="text-xl font-medium mb-4">Problems</h4> */}
-      <SearchAndSort
-        data={ReactChallengesData}
-        setFilteredData={setFilteredData}
-      />
+      <SearchAndSort data={data} setFilteredData={setFilteredData} />
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredData.map((item, idx) => (
           <div
             key={idx}
             className="p-4 border rounded-lg shadow-md card-box hover:-translate-y-1 transition-transform duration-300"
             onClick={() =>
-              navigate(`/dashboard/challenges/react/workspace/${idx}`)
+              navigate(`/dashboard/challenges/${type}/workspace/${idx}`)
             }
           >
             <h3 className="text-lg font-medium">{item.title}</h3>
