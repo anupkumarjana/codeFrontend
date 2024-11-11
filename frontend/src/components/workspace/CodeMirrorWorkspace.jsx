@@ -2,38 +2,49 @@ import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Editor from "@monaco-editor/react";
 import ProblemStatementCard from "./ProblemStatementCard";
-
+import debounce from "lodash.debounce";
 
 const CodeMirrorWorkspace = ({ data }) => {
   const { id } = useParams();
   const problem = data[id];
-  const [language, setLanguage] = useState("html");
-  const [theme, setTheme] = useState("vs-dark");
-  const [htmlCode, setHtmlCode] = useState(
-    localStorage.getItem("htmlCode") ||
-      `<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-    </head>
-    <body>
-      <h1>Hello, World!</h1>
-    </body>
-  </html>`
-  );
 
+  const defaultHtmlTemplate = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>`;
+
+  const defaultCssTemplate = `body { font-family: Arial; background-color: white; color: black; }`;
+  const defaultJsTemplate = `console.log('Hello from JavaScript');`;
+
+  const [htmlCode, setHtmlCode] = useState(
+    localStorage.getItem(`htmlCode-${id}`) ||
+      problem?.htmlTemplate ||
+      defaultHtmlTemplate
+  );
   const [cssCode, setCssCode] = useState(
-    localStorage.getItem("cssCode") ||
-      `body { font-family: Arial; background-color:white; color: black;}`
+    localStorage.getItem(`cssCode-${id}`) ||
+      problem?.cssTemplate ||
+      defaultCssTemplate
   );
   const [jsCode, setJsCode] = useState(
-    localStorage.getItem("jsCode") || "console.log('Hello from JavaScript');"
+    localStorage.getItem(`jsCode-${id}`) ||
+      problem?.jsTemplate ||
+      defaultJsTemplate
   );
-  const iframeRef = useRef(null);
 
-  const updateIframe = () => {
+  const [language, setLanguage] = useState("html");
+  const [theme, setTheme] = useState("vs-dark");
+  const iframeRef = useRef(null);
+  const [iframeKey, setIframeKey] = useState(Date.now());
+
+  const updateIframe = debounce(() => {
     const iframe = iframeRef.current;
     if (iframe) {
       const content = `
@@ -54,25 +65,23 @@ const CodeMirrorWorkspace = ({ data }) => {
       </html>
     `;
 
-      // Create a blob URL to ensure fresh content
       const blob = new Blob([content], { type: "text/html" });
       const url = URL.createObjectURL(blob);
       iframe.src = url;
 
-      // Clean up the previous blob URL to prevent memory leaks
       iframe.onload = () => URL.revokeObjectURL(url);
     }
-  };
-
+  }, 300);
 
   useEffect(() => {
     updateIframe();
 
-    // Save code to localStorage
-    localStorage.setItem("htmlCode", htmlCode);
-    localStorage.setItem("cssCode", cssCode);
-    localStorage.setItem("jsCode", jsCode);
-  }, [htmlCode, cssCode, jsCode]);
+    localStorage.setItem(`htmlCode-${id}`, htmlCode);
+    localStorage.setItem(`cssCode-${id}`, cssCode);
+    localStorage.setItem(`jsCode-${id}`, jsCode);
+
+    setIframeKey(Date.now());
+  }, [htmlCode, cssCode, jsCode, id]);
 
   if (!problem) {
     return <div className="text-center">Problem not found!</div>;
@@ -133,6 +142,7 @@ const CodeMirrorWorkspace = ({ data }) => {
 
           <div className="border border-gray-500 rounded overflow-hidden h-[81vh] w-1/2">
             <iframe
+              key={iframeKey}
               ref={iframeRef}
               title="output"
               style={{ width: "100%", height: "100%", border: "none" }}
