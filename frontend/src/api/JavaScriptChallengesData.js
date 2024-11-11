@@ -1,34 +1,55 @@
 export const JavaScriptChallengesData = [
   {
-    title: "Fibonacci Sequence Generator",
+    title: "Change Background Color",
     description: {
       summary:
-        "Write a function that generates the first 'n' numbers in the Fibonacci sequence.",
-      topic: "JavaScript: Algorithms",
+        "Write a function that changes the background color of a webpage.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that returns the Fibonacci sequence up to the nth number.",
-        "The sequence should start with 0 and 1, and each subsequent number is the sum of the two preceding ones.",
+        "Implement a button that, when clicked, changes the background color of the webpage.",
+        "Use different colors for each click, cycling through an array of colors.",
       ],
     },
-    tags: ["fibonacci", "algorithms"],
+    tags: ["dom manipulation", "css"],
     icons: ["faJsSquare"],
-    difficulty: "Medium",
-    demoLink: "",
+    difficulty: "Easy",
+    demoLink:
+      "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXF5eHNrYjZ4ZDB4YXc1cG0wejl6NmNjemp4aG9wZzd0bWxxNmp1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8J8ismUjoOP7IY4PFs/giphy.gif",
     author: "Anup K Jana",
     authorProfession: "Frontend Developer",
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Prime Number Checker",
+    title: "Display Current Date and Time",
     description: {
-      summary: "Create a function to check if a number is prime or not.",
-      topic: "JavaScript: Algorithms",
+      summary: "Create a function that displays the current date and time.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that checks whether a number is prime.",
-        "A prime number is only divisible by 1 and itself.",
+        "Implement a button that displays the current date and time on the webpage when clicked.",
+        "The date and time should update each time the button is clicked.",
       ],
     },
-    tags: ["prime", "algorithms"],
+    tags: ["dom manipulation", "date"],
+    icons: ["faJsSquare"],
+    difficulty: "Easy",
+    demoLink:
+      "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGd3d2ZpNHJ0MDM1czJ3a3RqOGtpaGEwbzdkdW05bDRydmdpN29tNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zUUIeVAZgp0ImcDAXS/giphy.gif",
+    author: "Anup K Jana",
+    authorProfession: "Frontend Developer",
+    authorLinkedin: "https://linkedin.com/in/anupkumarjana",
+  },
+  {
+    title: "Counter Button",
+    description: {
+      summary:
+        "Write a function that increments a counter displayed on the webpage.",
+      topic: "JavaScript: DOM Manipulation",
+      requirements: [
+        "Create a button that, when clicked, increments a counter displayed on the page.",
+        "The counter should start from 0 and increase by 1 with each click.",
+      ],
+    },
+    tags: ["dom manipulation", "counter"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
     demoLink: "",
@@ -37,16 +58,16 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Reverse String",
+    title: "Toggle Visibility of Text",
     description: {
-      summary: "Write a function that takes a string and returns it reversed.",
-      topic: "JavaScript: String Manipulation",
+      summary: "Write a function to toggle the visibility of a paragraph.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that reverses a string.",
-        "The function should take a string as input and return the reversed string.",
+        "Create a button that, when clicked, toggles the visibility of a paragraph on the page.",
+        "The button text should change to 'Hide' or 'Show' based on the paragraph's visibility.",
       ],
     },
-    tags: ["string manipulation"],
+    tags: ["dom manipulation", "toggle"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
     demoLink: "",
@@ -55,17 +76,16 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Factorial Calculator",
+    title: "Add Item to List",
     description: {
-      summary:
-        "Write a function that calculates the factorial of a given number.",
-      topic: "JavaScript: Math",
+      summary: "Create a function to add a new item to an unordered list.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that calculates the factorial of a number.",
-        "The factorial of a number 'n' is the product of all integers from 1 to n.",
+        "Create an input field and button that adds the text from the input field as a new list item.",
+        "The new item should appear at the end of an unordered list each time the button is clicked.",
       ],
     },
-    tags: ["math", "algorithms"],
+    tags: ["dom manipulation", "list"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
     demoLink: "",
@@ -74,17 +94,16 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Find Largest Number in an Array",
+    title: "Remove List Item",
     description: {
-      summary:
-        "Write a function that returns the largest number from an array of numbers.",
-      topic: "JavaScript: Arrays",
+      summary: "Write a function to remove the last item in an unordered list.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that takes an array of numbers and returns the largest number.",
-        "If the array is empty, return null.",
+        "Add a button that removes the last item in an unordered list each time it is clicked.",
+        "If there are no items left in the list, disable the button.",
       ],
     },
-    tags: ["arrays", "algorithms"],
+    tags: ["dom manipulation", "list"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
     demoLink: "",
@@ -93,17 +112,16 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Sum of Digits",
+    title: "Image Slider",
     description: {
-      summary:
-        "Write a function that calculates the sum of digits of a number.",
-      topic: "JavaScript: Math",
+      summary: "Create a simple image slider with Next and Previous buttons.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that takes a number and returns the sum of its digits.",
-        "For example, the sum of digits of 1234 is 10 (1 + 2 + 3 + 4).",
+        "Implement two buttons, 'Next' and 'Previous,' that allow users to navigate through a series of images.",
+        "The images should cycle back to the start after the last image.",
       ],
     },
-    tags: ["math", "algorithms"],
+    tags: ["dom manipulation", "images"],
     icons: ["faJsSquare"],
     difficulty: "Medium",
     demoLink: "",
@@ -112,17 +130,34 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Palindrome Checker",
+    title: "Change Text on Hover",
     description: {
-      summary:
-        "Write a function that checks if a given string is a palindrome.",
-      topic: "JavaScript: String Manipulation",
+      summary: "Write a function that changes the text of an element on hover.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that checks if a string reads the same forward and backward.",
-        "The function should return true if the string is a palindrome, otherwise false.",
+        "Create a paragraph element that changes its text when the mouse hovers over it.",
+        "The text should revert back to the original when the mouse leaves the element.",
       ],
     },
-    tags: ["strings", "algorithms"],
+    tags: ["dom manipulation", "hover"],
+    icons: ["faJsSquare"],
+    difficulty: "Easy",
+    demoLink: "",
+    author: "Anup K Jana",
+    authorProfession: "Frontend Developer",
+    authorLinkedin: "https://linkedin.com/in/anupkumarjana",
+  },
+  {
+    title: "Form Validation",
+    description: {
+      summary: "Create a function to validate a simple form input.",
+      topic: "JavaScript: DOM Manipulation",
+      requirements: [
+        "Implement a form with an input field that requires a non-empty value.",
+        "Display a warning message if the user tries to submit the form with an empty field.",
+      ],
+    },
+    tags: ["dom manipulation", "forms"],
     icons: ["faJsSquare"],
     difficulty: "Medium",
     demoLink: "",
@@ -131,54 +166,16 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
   {
-    title: "Find Missing Number in Array",
+    title: "Character Counter",
     description: {
-      summary:
-        "Write a function that finds the missing number in a consecutive array of numbers.",
-      topic: "JavaScript: Arrays",
+      summary: "Write a function that counts the characters in a text area.",
+      topic: "JavaScript: DOM Manipulation",
       requirements: [
-        "Implement a function that finds the missing number in an array of consecutive numbers.",
-        "For example, for the array [1, 2, 4], the missing number is 3.",
+        "Create a text area and display the character count below it.",
+        "Update the character count each time the user types in the text area.",
       ],
     },
-    tags: ["arrays", "algorithms"],
-    icons: ["faJsSquare"],
-    difficulty: "Medium",
-    demoLink: "",
-    author: "Anup K Jana",
-    authorProfession: "Frontend Developer",
-    authorLinkedin: "https://linkedin.com/in/anupkumarjana",
-  },
-  {
-    title: "Count Vowels and Consonants",
-    description: {
-      summary:
-        "Write a function that counts the number of vowels and consonants in a string.",
-      topic: "JavaScript: String Manipulation",
-      requirements: [
-        "Implement a function that takes a string and returns the count of vowels and consonants.",
-        "The function should ignore spaces and other non-alphabetic characters.",
-      ],
-    },
-    tags: ["strings", "algorithms"],
-    icons: ["faJsSquare"],
-    difficulty: "Medium",
-    demoLink: "",
-    author: "Anup K Jana",
-    authorProfession: "Frontend Developer",
-    authorLinkedin: "https://linkedin.com/in/anupkumarjana",
-  },
-  {
-    title: "Remove Duplicates from Array",
-    description: {
-      summary: "Write a function that removes duplicate values from an array.",
-      topic: "JavaScript: Arrays",
-      requirements: [
-        "Implement a function that removes all duplicate values from an array.",
-        "The function should return an array with only unique values.",
-      ],
-    },
-    tags: ["arrays", "algorithms"],
+    tags: ["dom manipulation", "text"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
     demoLink: "",
@@ -187,4 +184,3 @@ export const JavaScriptChallengesData = [
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
   },
 ];
-  
