@@ -24,7 +24,7 @@ const ContributePage = () => {
   };
 
   return (
-    <div className="flex  items-start justify-between min-h-screen text-white p-10">
+    <div className="flex  items-start justify-between  text-white p-10">
       <div className="flex flex-col gap-4 justify-start items-start">
         <h2 className="text-4xl font-bold">Contribute to the Community</h2>
         <h4 className="text-lg mb-8 max-w-xl text-start">
