@@ -52,7 +52,7 @@ export const JavaScriptChallengesData = [
     tags: ["dom manipulation", "counter"],
     icons: ["faJsSquare"],
     difficulty: "Easy",
-    demoLink: "",
+    demoLink: "https://s4.ezgif.com/tmp/ezgif-4-a0cc2b199e.gif",
     author: "Anup K Jana",
     authorProfession: "Frontend Developer",
     authorLinkedin: "https://linkedin.com/in/anupkumarjana",
