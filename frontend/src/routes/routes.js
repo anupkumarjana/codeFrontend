@@ -5,10 +5,10 @@ import BlogPage from "../pages/Nav-Pages/BlogPage";
 import ContributePage from "../pages/Nav-Pages/ContributePage";
 // Dashboard Challenge Pages
 import DashboardPage from "../pages/Nav-Pages/DashboardPage";
-import ReactChallanges from "../pages/Dashboard-Pages/Challenge Pages/ReactChallanges";
-import JavaScriptChallenges from "../pages/Dashboard-Pages/Challenge Pages/JavaScriptChallenges";
-import HTMLChallenges from "../pages/Dashboard-Pages/Challenge Pages/HTMLChallenges";
-import CSSChallenges from "../pages/Dashboard-Pages/Challenge Pages/CSSChallenges";
+import ReactChallanges from "../pages/Dashboard-Pages/Challenge Pages/ProblemPages/ReactChallanges";
+import JavaScriptChallenges from "../pages/Dashboard-Pages/Challenge Pages/ProblemPages/JavaScriptChallenges";
+import HTMLChallenges from "../pages/Dashboard-Pages/Challenge Pages/ProblemPages/HTMLChallenges";
+import CSSChallenges from "../pages/Dashboard-Pages/Challenge Pages/ProblemPages/CSSChallenges";
 
 // Dashboard Technical Pages
 import ReactInterviewPrep from "../pages/Dashboard-Pages/Interview-prep/Technical-Pages/ReactInterviewPrep";
