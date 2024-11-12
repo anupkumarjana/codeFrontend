@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Heading from "../../../components/challenges/Heading";
+import Heading from "../../../../components/challenges/Heading.jsx";
 // import PopularProblems from "../../../components/challenges/PopularProblems";
-import Problems from "../../../components/challenges/Problems";
-import ShimmerUI from "../../../components/challenges/ShimmerUI";
+import Problems from "../../../../components/challenges/Problems.jsx";
+import ShimmerUI from "../../../../components/challenges/ShimmerUI.jsx";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
-import {ReactChallengesData} from "../../../api/ReactChallengesData.js"
+import {ReactChallengesData} from "../../../../api/ReactChallengesData.js"
 
 const ReactChallanges = () => {
   const [loading, setLoading] = useState(true);

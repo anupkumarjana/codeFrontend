@@ -1,8 +1,8 @@
 import React from 'react'
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
-import Heading from '../../../components/challenges/Heading';
-import Problems from '../../../components/challenges/Problems';
-import { JavaScriptChallengesData } from '../../../api/JavaScriptChallengesData';
+import Heading from '../../../../components/challenges/Heading';
+import Problems from '../../../../components/challenges/Problems';
+import { JavaScriptChallengesData } from '../../../../api/JavaScriptChallengesData';
 
 const JavaScriptChallenges = () => {
 
