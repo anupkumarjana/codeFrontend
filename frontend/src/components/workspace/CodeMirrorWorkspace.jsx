@@ -89,7 +89,7 @@ const CodeMirrorWorkspace = ({ data }) => {
 
   return (
     <div className="h-[calc(100vh-60px)] text-white flex gap-3">
-      <div className="w-2/4">
+      <div className="">
         <ProblemStatementCard problem={problem} />
       </div>
 

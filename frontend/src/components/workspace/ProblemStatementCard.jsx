@@ -18,7 +18,7 @@ const ProblemStatementCard = ({ problem }) => {
   };
 
   return (
-    <div className="overflow-y-auto h-[87vh] rounded-md bg-[#191919] border border-[#292929] p-6 font-poppins flex flex-col gap-6">
+    <div className="resize-x max-w-[600px] overflow-y-auto h-[87vh] rounded-md bg-[#191919] border border-[#292929] p-6 font-poppins flex flex-col gap-6">
       {/* Title */}
       <h4 className="text-2xl font-semibold text-white">{problem.title}</h4>
 

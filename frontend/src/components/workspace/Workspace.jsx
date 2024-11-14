@@ -14,7 +14,7 @@ const Workspace = ({data}) => {
   return (
     <div className="h-[calc(100vh-60px)]  text-white flex gap-3">
       {/* Left: Problem Statement */}
-      <div className="w-2/4">
+      <div className="">
         <ProblemStatementCard problem={problem}/>
        
       </div>

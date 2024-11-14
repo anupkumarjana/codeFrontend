@@ -83,6 +83,9 @@ body {
  
 }
 
+.heading{
+  color: var(--color-primary-a20);
+}
 .button-bg{
   background-color: var(--color-primary-a20) ;
 }
@@ -304,4 +307,9 @@ p{
   100% {
     background-position: 200% 0;
   }
+}
+
+
+.resizable-container {
+  will-change: width;
 }

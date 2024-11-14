@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import CodeMirrorWorkspace from "../../../../components/workspace/CodeMirrorWorkspace";
+import { CSSChallengesData } from "../../../../api/CSSChallengesData";
 
 const CSSWorkspace = () => {
   return (
-    <div>CSSWorkspace</div>
-  )
-}
+    <div>
+      <CodeMirrorWorkspace data={CSSChallengesData} language="css" />
+    </div>
+  );
+};
 
-export default CSSWorkspace
+export default CSSWorkspace;

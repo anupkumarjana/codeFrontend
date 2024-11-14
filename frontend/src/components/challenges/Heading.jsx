@@ -9,7 +9,7 @@ const Heading = ({data}) => {
         <FontAwesomeIcon icon={data.icon} color={data.iconColor} />
       </span>
       <div>
-        <h3 className='text-2xl font-medium'>{data.title}</h3>
+        <h3 className='text-2xl font-medium heading'>{data.title}</h3>
         <p className='font-normal text-sm'>
         {data.description}
           
