@@ -1,7 +1,7 @@
 import React from 'react'
-import Heading from "../../../components/challenges/Heading";
-import Problems from "../../../components/challenges/Problems";
-import { HTMLChallengesData } from '../../../api/HTMLChallengesData';
+import Heading from '../../../../components/challenges/Heading';
+import Problems from '../../../../components/challenges/Problems';
+import { HTMLChallengesData } from '../../../../api/HTMLChallengesData';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 const HTMLChallenges = () => {

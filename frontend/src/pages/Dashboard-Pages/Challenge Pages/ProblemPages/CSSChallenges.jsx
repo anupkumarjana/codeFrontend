@@ -1,7 +1,7 @@
 import React from "react";
-import Heading from "../../../components/challenges/Heading";
-import Problems from "../../../components/challenges/Problems";
-import { CSSChallengesData } from "../../../api/CSSChallengesData";
+import Heading from "../../../../components/challenges/Heading";
+import Problems from "../../../../components/challenges/Problems";
+import { CSSChallengesData } from "../../../../api/CSSChallengesData";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3 } from "@fortawesome/free-brands-svg-icons";
 // import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
